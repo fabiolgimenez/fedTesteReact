@@ -1,0 +1,222 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #000;
+}
+
+hr {
+    margin: 5px 5px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    margin: auto;
+}
+
+.login-box {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 32px;
+    width: 300px;
+    text-align: center;
+
+}
+
+.abs {
+    position: absolute;
+}
+
+.login-box h2 {
+    margin-bottom: 24px;
+    color: #333;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #000;
+}
+
+.login-box input:focus {
+    outline: none;
+    border-color: #4caf50;
+}
+
+.login-box button {
+    background-color: #4caf50;
+    color: white;
+    padding: 14px 20px;
+    margin-top: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+.login-box button:hover {
+    background-color: #3e8e41;
+}
+
+.login-box button:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
+.error-message {
+    color: red;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+@media (max-width: 480px) {
+    .login-box {
+        width: 90%;
+        padding: 24px;
+    }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    /* Junta as bordas das células */
+    margin-top: 20px;
+    /* Espaçamento acima da tabela */
+    background-color: #fff;
+    /* Fundo branco para a tabela */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    border-radius: 8px;
+    /* Bordas arredondadas */
+    overflow: hidden;
+    /* Garante que o border-radius funcione corretamente */
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    /* Linha divisória entre as linhas */
+}
+
+th {
+    background-color: #f2f2f2;
+    /* Cor de fundo para o cabeçalho */
+    font-weight: bold;
+    /* Texto em negrito para o cabeçalho */
+}
+
+tbody tr:hover {
+    background-color: #f5f5f5;
+    /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilos para os botões da tabela */
+ button {
+    background-color: #4caf50;
+    /* Verde */
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 5px;
+    /* Espaçamento entre os botões */
+}
+
+ button:hover {
+    background-color: #3e8e41;
+    /* Verde mais escuro */
+}
+
+/* Estilo para o botão de excluir (vermelho) */
+ button:last-child {
+    background-color: #f44336;
+    /* Vermelho */
+}
+
+ button:last-child:hover {
+    background-color: #d32f2f;
+    /* Vermelho mais escuro */
+}
+
+/* Media query para tornar a tabela responsiva */
+@media (max-width: 768px) {
+    table {
+        border: 0;
+        /* Remove a borda da tabela em telas pequenas */
+    }
+
+    table thead {
+        display: none;
+        /* Esconde o cabeçalho da tabela */
+    }
+
+    table tr {
+        margin-bottom: 10px;
+        display: block;
+        border-bottom: 2px solid #ddd;
+        /* Adiciona uma borda mais grossa entre as linhas */
+    }
+
+    table td {
+        display: block;
+        text-align: right;
+        /* Alinha o texto à direita */
+        font-size: 14px;
+        border-bottom: 1px dotted #ccc;
+        /* Adiciona uma linha pontilhada entre os dados */
+    }
+
+    table td:last-child {
+        border-bottom: 0;
+        /* Remove a borda da última célula */
+    }
+
+    table td::before {
+        content: attr(data-label);
+        /* Pega o valor do atributo data-label */
+        float: left;
+        /* Alinha o texto à esquerda */
+        font-weight: bold;
+        /* Texto em negrito */
+        text-transform: uppercase;
+        /* Texto em maiúsculas */
+    }
+
+    button {
+        display: block;
+        /* Exibe os botões em linhas separadas */
+        width: 100%;
+        /* Preenche a largura da célula */
+        margin-bottom: 5px;
+        /* Espaçamento abaixo dos botões */
+    }
+}
+
+.logout {
+    border: solid 1px red;
+    padding: 5px;
+    border-radius: 5px;
+    background: white;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+}
